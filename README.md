@@ -8,8 +8,10 @@ grep
 paste
 
 ## How to install
-
+Copy and paste the following commands in your terminal:
 ```
 git clone https://github.com/alexandruioanvoda/IntronPicker
 cd ./IntronPicker
-chmod +x intron_picker.sh```
+chmod +x intron_picker.sh
+```
+asdf
