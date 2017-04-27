@@ -6,3 +6,9 @@ Bash
 bedtools
 grep
 paste
+
+## How to install
+
+'''git clone https://github.com/alexandruioanvoda/IntronPicker
+cd ./IntronPicker
+chmod +x intron_picker.sh'''
