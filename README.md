@@ -9,6 +9,6 @@ paste
 
 ## How to install
 
-'''git clone https://github.com/alexandruioanvoda/IntronPicker
+```git clone https://github.com/alexandruioanvoda/IntronPicker
 cd ./IntronPicker
-chmod +x intron_picker.sh'''
+chmod +x intron_picker.sh```
