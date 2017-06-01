@@ -23,5 +23,8 @@ rm temp_upstream.csv temp_downstream.csv unified_ids.csv
 paste introned_upstream.csv introned_downstream.csv | awk 'BEGIN{OFS="\t";}{print $1, $2, $3, $4, $5, $6, $7, $8, $15, $16, $17}' > output.csv
 rm introned_upstream.csv introned_downstream.csv
 echo -e 'Chromosome\tStart\tEnd\tID\tStrand\tIntron_upstream_start\tIntron_upstream_end\tIntron_up_id\tIntron_down_start\tIntron_down_end\tIntron_down_id' | cat - output.csv > temp && mv temp output.csv
+
+#insert a line for dm3 bugs
+#cat output.csv | grep -v -e "-1\t-1" > temp_output.csv && mv temp_output.csv output.csv
 tail -n +2 output.csv | awk 'BEGIN{OFS="\t";}{print $1, $6, $7, $4, "0", $5}' > upstream_introns.bed
 tail -n +2 output.csv | awk 'BEGIN{OFS="\t";}{print $1, $9, $10, $4, "0", $5}' > downstream_introns.bed
